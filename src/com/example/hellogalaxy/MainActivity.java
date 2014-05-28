@@ -1,6 +1,7 @@
 package com.example.hellogalaxy;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -38,6 +39,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
 			 //メッセージ表示用のTextViewを探して、文字を設定
 			 TextView tv = (TextView)findViewById(R.id.txvMsg);
 			 tv.setText("あなたでしたか、" + inputMsg + inputMsg2 + "さん。"); 
+			 //インテントのインスタンス生成
+			 Intent intent = new Intent(MainActivity.this, MsgActivity.class);
+			 //次画面のアクティビティ起動
+			 startActivity(intent);
+		
 		}
 		
 
